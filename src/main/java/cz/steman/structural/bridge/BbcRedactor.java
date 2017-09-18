@@ -1,18 +1,19 @@
-package cz.steman.structural.bridge.movie;
+package cz.steman.structural.bridge;
 
 import java.util.List;
 
-public class PrintFormatter implements Formatter {
+public class BbcRedactor implements Redactor {
 
     @Override
-    public String format(String header, List<Detail> details) {
+    public String redact(List<Attribute> attributes) {
+
         StringBuilder builder = new StringBuilder();
 
-        builder.append(header);
+        builder.append("BBC news");
         builder.append("\n");
 
-        details.forEach(it -> {
-            builder.append(it.getLabel());
+        attributes.forEach(it -> {
+            builder.append(it.getName());
             builder.append(":");
             builder.append(it.getValue());
             builder.append("\n");
