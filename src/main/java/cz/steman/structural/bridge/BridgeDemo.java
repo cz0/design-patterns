@@ -3,7 +3,7 @@ package cz.steman.structural.bridge;
 public class BridgeDemo {
 
     public static void main(String[] args) {
-        Article article = new Article("123", "The greates news", "Royal families");
+        Article article = new Article("123", "The greatest news", "Royal families");
 
         Publisher publisher = new ArticlePublisher(article);
 
